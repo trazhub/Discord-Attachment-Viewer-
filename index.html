@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Discord Attachment Viewer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light only" />
+    <meta name="description" content="Discord Attachment Viewer" />
+    <meta property="og:site_name" content="Discord Attachment Viewer" />
+    <meta property="og:title" content="Discord Attachment Viewer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Discord Attachment Viewer" />
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/5968/5968756.png">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Inter:ital,wght@0,600;1,600" rel="stylesheet"
+        type="text/css" />
+        <link href="./styles.css" rel="stylesheet"
+        type="text/css" />
+    <noscript>
+        <style>
+            body {
+                overflow: auto !important;
+            }
+
+            body:after {
+                display: none !important;
+            }
+
+            #main>.inner {
+                opacity: 1.0 !important;
+            }
+
+            #main {
+                opacity: 1.0 !important;
+                transform: none !important;
+                transition: none !important;
+                filter: none !important;
+            }
+
+            #main>.inner>section {
+                opacity: 1.0 !important;
+                transform: none !important;
+                transition: none !important;
+                filter: none !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body class="is-loading">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <h1 id="text01"><span class="p">Discord<br /> Attachment<br /> Viewer!</span></h1>
+                <hr id="divider01">
+                <div  class="healer01" enctype="multipart/form-data" id="form01" method="post">
+                    <div class="inner">
+                        <div class="field" data-type="text"><input type="text" name="link"  id="linked"
+                                placeholder="Link" required /></div>
+                        <div class="field"><input type="text" name="your-url"
+                                placeholder="Your Url" /></div>
+                        <div class="actions"><button type="submit" onclick="healer()">Submit</button></div>
+                    </div><input type="hidden" name="id" value="form01" />
+                </div>
+                <div id="video01" class="video full"><video id="video" src="https://cdn.discordapp.com/attachments/972906189795000490/1051373404181254194/jmxrj7.mp4?ex=6656c049&is=66556ec9&hm=4b53dea56413193181987fbd2d280a9bce15cd42db820c514e7dc0b94ab9a02c&"
+                        poster="assets/videos/video01.mp4.jpg?v=3352c305" preload="auto" playsinline webkit-playsinline
+                        muted autoplay controls></video></div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+        //video change
+        function main(){
+            var videoLink = document.getElementById("linked").value
+            console.log(videoLink)
+            document.getElementById("video").src = videoLink;
+        }
+    </script>
+</body>
+
+</html>
